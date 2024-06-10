@@ -72,7 +72,8 @@ def calculate_surplus_data(sales_row):
     """
     print("Calculating surplus data...\n")
     stock = SHEET.worksheet("stock").get_all_values()
-    pprint(stock)
+    stock_row = stock[-1]
+    print(stock_row)
 
 
 def main():
@@ -84,5 +85,5 @@ def main():
     update_sales_worksheet(sales_data)
     calculate_surplus_data(sales_data)
 
-    print("Welcome to Love Sandwiches Data Automation")
-    main()
+print("Welcome to Love Sandwiches Data Automation")
+main()
